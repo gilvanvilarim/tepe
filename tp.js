@@ -7,6 +7,7 @@ UMA SOLUÇÃO DOMÉSTICA PARA PRODUÇÃO DE CONTEÚDOS DIGITAIS
 DE VIDEOAULAS COM TELEPROMPTER
 
 Prof. Gilvan de Oliveira Vilarim - gilvan.vilarim@ifrj.edu.br
+
 Colaborador: Prof. Caio Henrique Sicas Lamas
 Aluno: Aleson Sobral Felizardo - Técnico em Informática para Internet
 
@@ -16,16 +17,11 @@ Adaptado livremente de:
 https://whitehatcrew.com/tools/free-online-teleprompter.php 
 
 Mudanças realizadas para código mais legível e didático:
- - nova indentação;
- - separação do HTML, CSS e JS; 
- - CSS mínimo para flexibilizar estilização e uso de frameworks;
- - adaptação de comandos;
- - tradução da interface;
- - tradução e padronização de identificadores;
- - inclusão de comentários;
- - diversos espaçamentos, limpeza e arrumação no código; 
- - conversão de valores absolutos em porcentagens, para ficar mais responsivo;
- - tratamento de eventos com ouvintes;
+nova indentação; separação do HTML, CSS e JS; CSS mínimo para flexibilizar 
+estilização e uso de frameworks; adaptação de comandos; tradução da interface;
+tradução e padronização de identificadores; inclusão de comentários; diversos 
+espaçamentos, limpeza e arrumação no código; conversão de valores absolutos em 
+porcentagens; tratamento de eventos com ouvintes;
 
 Novas funcionalidades:
 - personalização de teclas de atalho
