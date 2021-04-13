@@ -162,7 +162,7 @@ function navTeclas(e) {
 	CONTROL SHIFT ALTGRAPH ALT
 	PERIOD COMMA SLASH INTLRO INTLBACKSLASH
 	SHIFTLEFT SHIFTRIGHT ALT
-	
+	AUDIOVOLUMEUP
 	
 
   AB Shutter: botão IOS é 175 (Vol+), botão Android é 13 (Enter)
@@ -188,7 +188,6 @@ function navTeclas(e) {
       break;
 	//Avançar rolagem
     case tcAva.value:
-      //posTopo = posTopo - e.shiftKey ? 600 : 150;
       posTopo = posTopo - 150;
       conteudo.style.top = posTopo + 'px';
       teclou = true;
