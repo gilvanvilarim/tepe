@@ -3,187 +3,191 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tepê</title>
+    <title>Tepê</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="tp.css"/>
+    <link rel="stylesheet" type="text/css" href="tp.css" />
 </head>
 
 <body>
-  <div id="divEdicao">
-    <!-- div mais externa -->
-    <div>
-        <!-- Cabeçalho da página -->
-        <div class="w3-container w3-green-IF">
-            <h1 class="w3-left"><b>Tepê</b></h1>
-        </div>
+    <div id="divEdicao">
+        <!-- div mais externa -->
+        <div>
+            <!-- Cabeçalho da página -->
+            <div class="w3-container w3-green-IF">
+                <h1 class="w3-left"><b>Tepê</b></h1>
+            </div>
 
-        <!-- Painel de botões -->
-        <div class="w3-panel w3-center w3-padding-64">
-            <button class="w3-button w3-red-IF w3-round-xlarge" id="btExecutar"> <i class="material-icons w3-xxxlarge">smart_display</i>
-            </button>
-            <button class="w3-button w3-green-IF w3-round-xlarge"> <i class="material-icons w3-xxlarge w3-text-black"
-                    onclick="document.getElementById('id02').style.display='block'">font_download</i>
-            </button>
-            <button class="w3-button w3-green-IF w3-round-xlarge"> <i class="material-icons w3-xxlarge w3-text-black"
-                    onclick="document.getElementById('id01').style.display='block'">settings</i>
-            </button>
-            <button class="w3-button w3-green-IF w3-round-xlarge"> <i class="material-icons w3-xxlarge w3-text-black"
-                    onclick="document.getElementById('id03').style.display='block'">live_help</i>
-            </button>
-        </div>
+            <!-- Painel de botões -->
+            <div class="w3-panel w3-center w3-padding-64">
+                <button class="w3-button w3-red-IF w3-round-xlarge" id="btExecutar"> <i
+                        class="material-icons w3-xxxlarge">smart_display</i>
+                </button>
+                <button class="w3-button w3-green-IF w3-round-xlarge"> <i
+                        class="material-icons w3-xxlarge w3-text-black"
+                        onclick="document.getElementById('id02').style.display='block'">font_download</i>
+                </button>
+                <button class="w3-button w3-green-IF w3-round-xlarge"> <i
+                        class="material-icons w3-xxlarge w3-text-black"
+                        onclick="document.getElementById('id01').style.display='block'">settings</i>
+                </button>
+                <button class="w3-button w3-green-IF w3-round-xlarge"> <i
+                        class="material-icons w3-xxlarge w3-text-black"
+                        onclick="document.getElementById('id03').style.display='block'">live_help</i>
+                </button>
+            </div>
 
-        <!-- Painel com a caixa de texto -->
-        <div class="w3-panel w3-center">
-            <b>Digite ou cole seu texto:</b><br>
-            <textarea name="inConteudo" id="inConteudo" cols="96" rows="12">
+            <!-- Painel com a caixa de texto -->
+            <div class="w3-panel w3-center">
+                <b>Digite ou cole seu texto:</b><br>
+                <textarea name="inConteudo" id="inConteudo" cols="96" rows="12">
  Machado de Assis foi um escritor brasileiro, considerado por muitos críticos, estudiosos, escritores e leitores um dos maiores nomes da literatura do Brasil. Ele escreveu em praticamente todos os gêneros literários, sendo poeta, romancista, cronista, dramaturgo, contista, folhetinista, jornalista e crítico literário. Machado testemunhou a abolição da escravatura e a mudança política no país quando a República substituiu o Império, além das mais diversas reviravoltas pelo mundo em finais do século XIX e início do século XX, tendo sido grande comentarista e relator dos eventos político-sociais de sua época.
 Nascido no Morro do Livramento, no Rio de Janeiro, mestiço, de uma família pobre, ele mal estudou em escolas públicas e nunca frequentou a universidade. Interessado pela boemia e pela corte, lutou para subir socialmente abastecendo-se de superioridade intelectual e da cultura da capital. Para isso Machado  assumiu diversos cargos públicos, passando pelo Ministério da Agricultura, do Comércio e das Obras Públicas, e conseguindo precoce notoriedade em jornais onde publicava suas primeiras poesias e crônicas. Em sua maturidade, junto a colegas próximos, fundou e foi o primeiro presidente da Academia Brasileira de Letras.
 Sua extensa obra constitui-se de dez romances, duzentos contos, dez peças teatrais, cinco coletâneas de poemas e sonetos, e mais de seiscentas crônicas. Seu legado foi de fundamental importância para as escolas literárias brasileiras do século XIX e do século XX e surge nos dias de hoje como de grande interesse acadêmico e público.
 			
 						
 			</textarea>
+            </div>
+
+            <!-- Rodapé -->
+            <div class="w3-container w3-green-IF w3-bottom">
+                <p>IFRJ - 2021</p>
+            </div>
+
         </div>
 
-        <!-- Rodapé -->
-        <div class="w3-container w3-green-IF w3-bottom">
-            <p>IFRJ - 2021</p>
-        </div>
+        <!-- Modal "Configurações" -->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-black">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-xlarge w3-display-topright">&times;</span>
+                    <h2>Configurações</h2>
+                </header>
+                <div class="w3-container">
+                    <form>
+                        <br>
+                        Velocidade
+                        <input type="text" name="inVeloc" id="inVeloc" size="1" value="15" /> pixels/segundo
+                        <hr>
+                        Letra
+                        <input type="text" name="inTam" id="inTam" size="1" value="16" /> pixels
+                        <hr>
+                        Largura
+                        <input type="text" name="inLargura" id="inLargura" size="1" value="20" /> %
+                        <hr>
+                        Início
+                        <input type="text" name="inPosIni" id="inPosIni" size="1" value="50" /> pixels
+                        <hr>
+                        Espelhar
+                        <input type="checkbox" name="chkEspelhado" id="chkEspelhado" value="0" />
+                        <hr>
+                        Maiúsculas
+                        <input type="checkbox" name="chkMaiusc" id="chkMaiusc" value="0" />
+                        <hr>
 
-    </div>
-
-    <!-- Modal "Configurações" -->
-    <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-card-4">
-            <header class="w3-container w3-black">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                    class="w3-button w3-xlarge w3-display-topright">&times;</span>
-                <h2>Configurações</h2>
-            </header>
-            <div class="w3-container">
-                <form>
-                    <br>
-                    Velocidade
-                    <input type="text" name="inVeloc" id="inVeloc" size="1" value="15" /> pixels/segundo
-                    <hr>
-                    Letra
-                    <input type="text" name="inTam" id="inTam" size="1" value="16" /> pixels
-                    <hr>
-                    Largura
-                    <input type="text" name="inLargura" id="inLargura" size="1" value="20" /> %
-                    <hr>
-                    Início
-                    <input type="text" name="inPosIni" id="inPosIni" size="1" value="50" /> pixels
-                    <hr>
-                    Espelhar
-                    <input type="checkbox" name="chkEspelhado" id="chkEspelhado" value="0" />
-                    <hr>
-                    Maiúsculas
-                    <input type="checkbox" name="chkMaiusc" id="chkMaiusc" value="0" />
-                    <hr>
-					
-                    <hr>
-                </form>
+                        <hr>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal "Atalhos" -->
-    <div id="id02" class="w3-modal">
-        <div class="w3-modal-content w3-card-4">
-            <header class="w3-container w3-black">
-                <span onclick="document.getElementById('id02').style.display='none'"
-                    class="w3-button w3-xlarge w3-display-topright">&times;</span>
-                <h2>Atalhos</h2>
-            </header>
-            <div class="w3-container">
-                <form>
-                    <br>
-                    Iniciar/Pausar
-					<input type="text" name="inTcIni" id="inTcIni" maxlength="1" size="1" value="/" />
-                    <br>
-					Reiniciar
-                    <input type="text" name="inTcRei" id="inTcRei" maxlength="1" size="1" value="X" />
-                    <hr>
-                    Avançar
-                    <input type="text" name="inTcAva" id="inTcAva" maxlength="1" size="1" value="A" />
-					<br>
-                    Recuar
-                    <input type="text" name="inTcRec" id="inTcRec" maxlength="1" size="1" value="Z" />
-					<hr>
-                    Acelerar
-                    <input type="text" name="inTcAce" id="inTcAce" maxlength="1" size="1" value="F" />
-					<br>
-                    Reduzir
-                    <input type="text" name="inTcRed" id="inTcRed" maxlength="1" size="1" value="S" />
-					<hr>
-                    Alargar
-                    <input type="text" name="inTcAla" id="inTcAla" maxlength="1" size="1" value="W" />
-					<br>
-                    Estreitar
-                    <input type="text" name="inTcEst" id="inTcEst" maxlength="1" size="1" value="N" />
-					<hr>
-                    Aumentar 
-                    <input type="text" name="inTcAum" id="inTcAum" maxlength="1" size="1" value="B" />
-					<br>
-                    Diminuir
-                    <input type="text" name="inTcDim" id="inTcDim" maxlength="1" size="1" value="L" />
-					<hr>
-                    Tela Cheia
-                    <input type="text" name="inTcTel" id="inTcTel" maxlength="1" size="1" value="U" />
-					<hr>
-                    Sair
-                    <input type="text" name="inTcSai" id="inTcSai" maxlength="1" size="1" value="Q" />
-                    <hr>
-                </form>
+        <!-- Modal "Atalhos" -->
+        <div id="id02" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-black">
+                    <span onclick="document.getElementById('id02').style.display='none'"
+                        class="w3-button w3-xlarge w3-display-topright">&times;</span>
+                    <h2>Atalhos</h2>
+                </header>
+                <div class="w3-container">
+                    <form>
+                        <br>
+                        Iniciar/Pausar
+                        <input type="text" name="inTcIni" id="inTcIni" maxlength="1" size="1" value="/" />
+                        <br>
+                        Reiniciar
+                        <input type="text" name="inTcRei" id="inTcRei" maxlength="1" size="1" value="X" />
+                        <hr>
+                        Avançar
+                        <input type="text" name="inTcAva" id="inTcAva" maxlength="1" size="1" value="A" />
+                        <br>
+                        Recuar
+                        <input type="text" name="inTcRec" id="inTcRec" maxlength="1" size="1" value="Z" />
+                        <hr>
+                        Acelerar
+                        <input type="text" name="inTcAce" id="inTcAce" maxlength="1" size="1" value="F" />
+                        <br>
+                        Reduzir
+                        <input type="text" name="inTcRed" id="inTcRed" maxlength="1" size="1" value="S" />
+                        <hr>
+                        Alargar
+                        <input type="text" name="inTcAla" id="inTcAla" maxlength="1" size="1" value="W" />
+                        <br>
+                        Estreitar
+                        <input type="text" name="inTcEst" id="inTcEst" maxlength="1" size="1" value="N" />
+                        <hr>
+                        Aumentar
+                        <input type="text" name="inTcAum" id="inTcAum" maxlength="1" size="1" value="B" />
+                        <br>
+                        Diminuir
+                        <input type="text" name="inTcDim" id="inTcDim" maxlength="1" size="1" value="L" />
+                        <hr>
+                        Tela Cheia
+                        <input type="text" name="inTcTel" id="inTcTel" maxlength="1" size="1" value="U" />
+                        <hr>
+                        Sair
+                        <input type="text" name="inTcSai" id="inTcSai" maxlength="1" size="1" value="Q" />
+                        <hr>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal "Ajuda" -->
-    <div id="id03" class="w3-modal">
-        <div class="w3-modal-content w3-card-4">
-            <header class="w3-container w3-black">
-                <span onclick="document.getElementById('id03').style.display='none'"
-                    class="w3-button w3-xlarge w3-display-topright">&times;</span>
-                <h2>Ajuda</h2>
-            </header>
-            <div class="w3-container">
-                <form>
-				<b>TEPÊ</b><br>
-				Um teleprompter virtual simples para apoio a leitura de textos em vídeos.<br>
-				<br>
-				Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro<br>
-				Campus São João de Meriti<br>
-				<br>
-				<b>Responsável:</b> prof. Gilvan Vilarim<br>
-				<b>Colaboração:</b> prof. Caio Henriques Sica Lamas e Bruno Carlos da Cunha Costa<br>
-				<b>Bolsista:</b> Aleson Sobral Felizardo<br>
-				<br>
-				<b>Botão Play:</b> abre texto que está na caixa e aguarda início da rolagem<br>
-				<b>Botão A:</b> permite escolher teclas de atalho usadas durante rolagem<br>
-				<b>Botão Engrenagem:</b> opções de configuração<br>
-				<b>Botão ?:</b> tela de ajuda e informações<br>
-				<br>
-				Para detalhes do Tepê, dicas de uso de teleprompter e ajuda para montar um suporte físico
-				de baixo custo, consulte o Manual do Tepê: CLIQUE AQUI<br>
-				<br>
-				<b>Contatos:</b> gilvan.vilarim@ifrj.edu.br
-				<br>
-				<br>
-                </form>
+        <!-- Modal "Ajuda" -->
+        <div id="id03" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-black">
+                    <span onclick="document.getElementById('id03').style.display='none'"
+                        class="w3-button w3-xlarge w3-display-topright">&times;</span>
+                    <h2>Ajuda</h2>
+                </header>
+                <div class="w3-container">
+                    <form>
+                        <b>TEPÊ</b><br>
+                        Um teleprompter virtual simples para apoio a leitura de textos em vídeos.<br>
+                        <br>
+                        Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro<br>
+                        Campus São João de Meriti<br>
+                        <br>
+                        <b>Responsável:</b> prof. Gilvan Vilarim<br>
+                        <b>Colaboração:</b> prof. Caio Henriques Sica Lamas e Bruno Carlos da Cunha Costa<br>
+                        <b>Bolsista:</b> Aleson Sobral Felizardo<br>
+                        <br>
+                        <b>Botão Play:</b> abre texto que está na caixa e aguarda início da rolagem<br>
+                        <b>Botão A:</b> permite escolher teclas de atalho usadas durante rolagem<br>
+                        <b>Botão Engrenagem:</b> opções de configuração<br>
+                        <b>Botão ?:</b> tela de ajuda e informações<br>
+                        <br>
+                        Para detalhes do Tepê, dicas de uso de teleprompter e ajuda para montar um suporte físico
+                        de baixo custo, consulte o Manual do Tepê: CLIQUE AQUI<br>
+                        <br>
+                        <b>Contatos:</b> gilvan.vilarim@ifrj.edu.br
+                        <br>
+                        <br>
+                    </form>
+                </div>
             </div>
         </div>
+
+    </div> <!-- divEdicao  -->
+
+    <!-- div de EXECUÇÃO    -->
+    <div id="divExecucao">
+        <div id="divVisor"></div>
+        <div id="divConteudo"></div>
     </div>
-
-  </div> <!-- divEdicao  -->
-
-  <!-- div de EXECUÇÃO    -->
-  <div id="divExecucao">
-    <div id="divVisor"></div>
-    <div id="divConteudo"></div>
-	</div>
-  <script type="text/javascript" src="tp.js"></script>
+    <script type="text/javascript" src="tp.js"></script>
 
 
 </body>
