@@ -65,28 +65,48 @@ Sua extensa obra constitui-se de dez romances, duzentos contos, dez peças teatr
                     <h2>Configurações</h2>
                 </header>
                 <div class="w3-container">
-                    <form>
-                        <br>
-                        Velocidade
-                        <input type="text" name="inVeloc" id="inVeloc" size="1" value="15" /> pixels/segundo
-                        <hr>
-                        Letra
-                        <input type="text" name="inTam" id="inTam" size="1" value="16" /> pixels
-                        <hr>
-                        Largura
-                        <input type="text" name="inLargura" id="inLargura" size="1" value="20" /> %
-                        <hr>
-                        Início
-                        <input type="text" name="inPosIni" id="inPosIni" size="1" value="50" /> pixels
-                        <hr>
-                        Espelhar
-                        <input type="checkbox" name="chkEspelhado" id="chkEspelhado" value="0" />
-                        <hr>
-                        Maiúsculas
-                        <input type="checkbox" name="chkMaiusc" id="chkMaiusc" value="0" />
-                        <hr>
-
-                        <hr>
+                    <form> 
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <br>
+                                    <td>Velocidade:</td>
+                                    <td>
+                                        <input type="text" name="inVeloc" id="inVeloc" size="3" value="15" /> pixels/segundo 
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>Letra:</td>
+                                    <td>
+                                        <input type="text" name="inTam" id="inTam" size="3" value="16" /> pixels
+                                    </td>
+                                </tr>
+                                <tr> 
+                                    <td>Largura:</td>
+                                    <td>
+                                        <input type="text" name="inLargura" id="inLargura" size="3" value="20" /> %
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Início:</td>
+                                    <td>
+                                        <input type="text" name="inPosIni" id="inPosIni" size="3" value="50" /> pixels
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Espelhar:</td>
+                                    <td>
+                                        <input type="checkbox" name="chkEspelhado" id="chkEspelhado" value="0" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maiúsculas:</td>
+                                    <td>
+                                        <input type="checkbox" name="chkMaiusc" id="chkMaiusc" value="0" />
+                                    </td>
+                                </tr>
+                            </tbody> 
+                        </table> 
                     </form>
                 </div>
             </div>
@@ -102,43 +122,60 @@ Sua extensa obra constitui-se de dez romances, duzentos contos, dez peças teatr
                 </header>
                 <div class="w3-container">
                     <form>
+                        <br> 
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Iniciar/Pausar:</td>
+                                    <td><input type="text" name="inTcIni" id="inTcIni" maxlength="1" size="3" value="/" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Reiniciar:</td>
+                                    <td><input type="text" name="inTcRei" id="inTcRei" maxlength="1" size="3" value="X" /></td>
+                                </tr> 
+                                <tr>
+                                    <td>Avançar:</td>
+                                    <td><input type="text" name="inTcAva" id="inTcAva" maxlength="1" size="3" value="A" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Recuar:</td>
+                                    <td><input type="text" name="inTcRec" id="inTcRec" maxlength="1" size="3" value="Z" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Acelerar:</td>
+                                    <td><input type="text" name="inTcAce" id="inTcAce" maxlength="1" size="3" value="F" /></td>
+                                </tr>         
+                                <tr>
+                                    <td>Reduzir:</td>
+                                    <td><input type="text" name="inTcRed" id="inTcRed" maxlength="1" size="3" value="S" /></td>
+                                </tr>  
+                                <tr>            
+                                    <td>Alargar:</td>
+                                    <td><input type="text" name="inTcAla" id="inTcAla" maxlength="1" size="3" value="W" /></td>
+                                </tr> 
+                                <tr>
+                                    <td>Estreitar:</td>
+                                    <td><input type="text" name="inTcEst" id="inTcEst" maxlength="1" size="3" value="N" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Aumentar:</td>
+                                    <td><input type="text" name="inTcAum" id="inTcAum" maxlength="1" size="3" value="B" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Diminuir:</td>
+                                    <td><input type="text" name="inTcDim" id="inTcDim" maxlength="1" size="3" value="L" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Tela Cheia:</td>
+                                    <td><input type="text" name="inTcTel" id="inTcTel" maxlength="1" size="3" value="U" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Sair:</td>
+                                    <td><input type="text" name="inTcSai" id="inTcSai" maxlength="1" size="3" value="Q" /></td>
+                                </tr> 
+                            </tbody> 
+                        </table> 
                         <br>
-                        Iniciar/Pausar
-                        <input type="text" name="inTcIni" id="inTcIni" maxlength="1" size="1" value="/" />
-                        <br>
-                        Reiniciar
-                        <input type="text" name="inTcRei" id="inTcRei" maxlength="1" size="1" value="X" />
-                        <hr>
-                        Avançar
-                        <input type="text" name="inTcAva" id="inTcAva" maxlength="1" size="1" value="A" />
-                        <br>
-                        Recuar
-                        <input type="text" name="inTcRec" id="inTcRec" maxlength="1" size="1" value="Z" />
-                        <hr>
-                        Acelerar
-                        <input type="text" name="inTcAce" id="inTcAce" maxlength="1" size="1" value="F" />
-                        <br>
-                        Reduzir
-                        <input type="text" name="inTcRed" id="inTcRed" maxlength="1" size="1" value="S" />
-                        <hr>
-                        Alargar
-                        <input type="text" name="inTcAla" id="inTcAla" maxlength="1" size="1" value="W" />
-                        <br>
-                        Estreitar
-                        <input type="text" name="inTcEst" id="inTcEst" maxlength="1" size="1" value="N" />
-                        <hr>
-                        Aumentar
-                        <input type="text" name="inTcAum" id="inTcAum" maxlength="1" size="1" value="B" />
-                        <br>
-                        Diminuir
-                        <input type="text" name="inTcDim" id="inTcDim" maxlength="1" size="1" value="L" />
-                        <hr>
-                        Tela Cheia
-                        <input type="text" name="inTcTel" id="inTcTel" maxlength="1" size="1" value="U" />
-                        <hr>
-                        Sair
-                        <input type="text" name="inTcSai" id="inTcSai" maxlength="1" size="1" value="Q" />
-                        <hr>
                     </form>
                 </div>
             </div>
@@ -154,6 +191,7 @@ Sua extensa obra constitui-se de dez romances, duzentos contos, dez peças teatr
                 </header>
                 <div class="w3-container">
                     <form>
+                        <br>
                         <b>TEPÊ</b><br>
                         Um teleprompter virtual simples para apoio a leitura de textos em vídeos.<br>
                         <br>

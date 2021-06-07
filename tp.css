@@ -1,5 +1,5 @@
 /*
-Código CSS
+Cï¿½digo CSS
 */
 
 * {
@@ -20,7 +20,7 @@ Código CSS
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /*evita que barra de rolagem afete centralizaçao do conteúdo */
+  overflow: hidden; /*evita que barra de rolagem afete centralizaï¿½ao do conteï¿½do */
 }
 
 #divVisor {
@@ -60,3 +60,10 @@ Código CSS
 	background-color:#c8191e!important
 }
 
+.input{
+  height: 25px;
+}
+
+#inTcIni, #inTcAva, #inTcAce, #inTcAla, #inTcAum{
+  margin-bottom: 6px;
+}
