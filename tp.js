@@ -8,15 +8,15 @@ DE VIDEOAULAS COM TELEPROMPTER
 
 Prof. Gilvan de Oliveira Vilarim - gilvan.vilarim@ifrj.edu.br
 
-Colaborador: Prof. Caio Henrique Sicas Lamas
-Aluno: Aleson Sobral Felizardo - Técnico em Informática para Internet
+Colaboradores: Prof. Caio Henrique Sicas Lamas e Bruno Carlos da Cunha Costa
+Aluno: Aleson Sobral Felizardo - Curso Técnico em Informática para Internet
 
 Teleprompter on-line - pequeno teleprompter para leitura de textos em câmeras
 ou aparelhos eletrônicos de tela 
 Adaptado livremente de:
 https://whitehatcrew.com/tools/free-online-teleprompter.php 
 
-Mudanças realizadas para código mais legível e didático:
+Mudanças realizadas:
 nova indentação; separação do HTML, CSS e JS; CSS mínimo para flexibilizar 
 estilização e uso de frameworks; adaptação de comandos; tradução da interface;
 tradução e padronização de identificadores; inclusão de comentários; diversos 
@@ -26,7 +26,7 @@ porcentagens; tratamento de eventos com ouvintes;
 Novas funcionalidades:
 - personalização de teclas de atalho
 - nova interface
-- persistência dos dados no Local Storage 
+- persistência de configurações no Local Storage 
 - testes com teclados sem fio ou virtuais
 - atalho para tela cheia
 - opção para exibir texto em maiúsculas
@@ -131,7 +131,7 @@ function execTeleprompter() {
   conteudo.style.transform       = transformacao;
   
   //Coloca em maiúsculas
-  conteudo.style.textTransform = maiusc.checked ? 'uppercase':'none';
+  conteudo.style.textTransform = maiusc.checked ? 'uppercase' : 'none';
   
   //Monta o texto dentro da div de rolagem
   conteudo.innerHTML = c.value.replace(/(\r\n|\r|\n)/g,"<br>");
@@ -145,7 +145,7 @@ function execTeleprompter() {
 
 /*
 Executar ação a partir da tecla pressionada
-Use o site https://keycode.info/ para saber os códigos das teclas
+Use o site https://keycode.info/ para conhecer os códigos das teclas
 */
 function navTeclas(e) {
   var teclou = false;
@@ -161,9 +161,7 @@ function navTeclas(e) {
     ARROWUP ARROWDOWN ARROWLEFT ARROWRIGHT
 	CONTROL SHIFT ALTGRAPH ALT
 	AUDIOVOLUMEUP AUDIOVOLUMEDOWN MEDIATRACKPREVIOUS MEDIATRACKNEXT MEDIAPLAYPAUSE
-	
-
-  AB Shutter: botão IOS é 175 (Vol+), botão Android é 13 (Enter)
+    AB Shutter: botão IOS é 175 (Vol+), botão Android é 13 (Enter)
   */
   var tecla = e.key.toUpperCase();
   switch (tecla){ //(e.keyCode) {
@@ -198,7 +196,8 @@ function navTeclas(e) {
       break;
 	//Acelerar rolagem
     case tcAce.value:
-      veloc = veloc + 5;
+      if (veloc < 90)
+        veloc = veloc + 5;
       velocf.value = veloc;
       teclou = true;
       break;
@@ -329,7 +328,6 @@ tcSai = document.getElementById("inTcSai");
 carregarDados();
 
 //Tratamento de eventos
-//c.addEventListener("touchstart",selecConteudo);
 c.addEventListener("click",selecConteudo);
 
 //executar.addEventListener("touchstart",execTeleprompter);
