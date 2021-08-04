@@ -6,10 +6,11 @@ Projeto PIBITI Jr. 2020-2021
 UMA SOLUÇÃO DOMÉSTICA PARA PRODUÇÃO DE CONTEÚDOS DIGITAIS
 DE VIDEOAULAS COM TELEPROMPTER
 
+Contatos:
 Prof. Gilvan de Oliveira Vilarim - gilvan.vilarim@ifrj.edu.br
 
 Colaboradores: Prof. Caio Henrique Sicas Lamas e Bruno Carlos da Cunha Costa
-Aluno: Aleson Sobral Felizardo - Curso Técnico em Informática para Internet
+Bolsista: Aleson Sobral Felizardo - Curso Técnico em Informática para Internet
 
 Teleprompter on-line - pequeno teleprompter para leitura de textos em câmeras
 ou aparelhos eletrônicos de tela 
@@ -18,10 +19,10 @@ https://whitehatcrew.com/tools/free-online-teleprompter.php
 
 Mudanças realizadas:
 nova indentação; separação do HTML, CSS e JS; CSS mínimo para flexibilizar 
-estilização e uso de frameworks; adaptação de comandos; tradução da interface;
-tradução e padronização de identificadores; inclusão de comentários; diversos 
+estilização e uso de frameworks futuros; adaptação de diversos comandos; tradução da interface;
+tradução e padronização de identificadores no código; inclusão de comentários; diversos 
 espaçamentos, limpeza e arrumação no código; conversão de valores absolutos em 
-porcentagens; tratamento de eventos com ouvintes;
+porcentagens; tratamento de eventos com ouvintes
 
 Novas funcionalidades:
 - personalização de teclas de atalho
@@ -39,7 +40,7 @@ Carregar últimos dados do localStorage do navegador, caso existam
 function carregarDados(){
   var aux;
   aux = localStorage.getItem("veloc");
-  if (aux != null){
+  if (aux != null){ // se houver dados no localstorage, carrega esses dados
     velocf.value      = localStorage.getItem("veloc");
     tamanho.value     = localStorage.getItem("tamanho");
     largura.value     = localStorage.getItem("largura");
@@ -98,13 +99,13 @@ Rolar o texto do conteúdo
 function rolarTexto() {
   if (!rolando)
     return;
-  posTopo = posTopo - veloc ;
-  conteudo.style.top = posTopo + 'px'; //rolagem da div de baixo para cima
+  posTopo = posTopo - veloc ; //rolagem da div de baixo para cima
+  conteudo.style.top = posTopo + 'px'; 
   setTimeout(rolarTexto, 500);
 }//rolarTexto()
 
 /*
-Executar teleprompter ao ocorrer evento de chamada
+Executar teleprompter no evento de chamada
 */
 function execTeleprompter() {
   //Grava dados no localStorage
@@ -112,9 +113,10 @@ function execTeleprompter() {
   
   //Inicializa atributos
   rolando = false;
-  veloc = parseInt(velocf.value);
+  veloc   = parseInt(velocf.value);
   telaEdicao.style.display  = 'none'; //oculta tela de edicao
   
+  //Ajusta local de apresentação da div
   posTopo = parseInt(posIni.value);
   conteudo.style.width      = largura.value + '%';
   conteudo.style.marginLeft = '-' + Math.ceil(largura.value/2) + '%';
@@ -122,7 +124,7 @@ function execTeleprompter() {
   conteudo.style.fontSize   = tamanho.value + 'px';
   conteudo.style.lineHeight = '1.4em'; //1.4x o tamanho da fonte corrente
   
-  //Faz espelhamento - usa compatibilidades com diferentes navegadores
+  //Faz espelhamento - compatibilidade com diferentes navegadores
   transformacao = espelhado.checked ? 'scaleX(-1)' : '';
   conteudo.style.msTransform     = transformacao;
   conteudo.style.MozTransform    = transformacao;
@@ -130,7 +132,7 @@ function execTeleprompter() {
   conteudo.style.OTransform      = transformacao;
   conteudo.style.transform       = transformacao;
   
-  //Coloca em maiúsculas
+  //Coloca texto a exibir em maiúsculas, caso tenha sido escolhido
   conteudo.style.textTransform = maiusc.checked ? 'uppercase' : 'none';
   
   //Monta o texto dentro da div de rolagem
@@ -145,7 +147,7 @@ function execTeleprompter() {
 
 /*
 Executar ação a partir da tecla pressionada
-Use o site https://keycode.info/ para conhecer os códigos das teclas
+Usar o site https://keycode.info/ para conhecer os códigos das teclas
 */
 function navTeclas(e) {
   var teclou = false;
@@ -154,14 +156,14 @@ function navTeclas(e) {
   - letra A e a: 65 e 97
   - letra Z e z: 90 e 122
   - Esc 27, Enter 13, Space 32, / 193
-  - setas: esq 37, sup 38, dir 39, inf 40
+  - Setas: esq 37, sup 38, dir 39, inf 40
   - TAB ENTER BACKSPACE
     CAPSLOCK SCROLLLOCK NUMLOCK
     INSERT DELETE HOME END PAGEUP PAGEDOWN
     ARROWUP ARROWDOWN ARROWLEFT ARROWRIGHT
 	CONTROL SHIFT ALTGRAPH ALT
 	AUDIOVOLUMEUP AUDIOVOLUMEDOWN MEDIATRACKPREVIOUS MEDIATRACKNEXT MEDIAPLAYPAUSE
-    AB Shutter: botão IOS é 175 (Vol+), botão Android é 13 (Enter)
+    No AB Shutter: botão IOS é 175 (Vol+), botão Android é 13 (Enter)
   */
   var tecla = e.key.toUpperCase();
   switch (tecla){ //(e.keyCode) {
@@ -172,7 +174,7 @@ function navTeclas(e) {
       else {
         rolando = true;
         rolarTexto();
-      }
+      }//if
       teclou = true;
       break;
 	//Reiniciar rolagem  
@@ -205,7 +207,7 @@ function navTeclas(e) {
     case tcRed.value:
       veloc = veloc - 5;
       if (veloc < 1)
-        veloc = 1; // para veloc ter um valor mínimo
+        veloc = 1;
       velocf.value = veloc;
       teclou = true;
       break;
@@ -219,15 +221,15 @@ function navTeclas(e) {
     case tcDim.value:
       tamanho.value = parseInt(tamanho.value) - 2;
       if (tamanho.value < 16)
-		tamanho.value = 16;//valor mínimo
+		tamanho.value = 16;
       conteudo.style.fontSize = tamanho.value + 'px';
       teclou = true;
       break;
-	//Alargar conteudo
+	//Alargar conteúdo
     case tcAla.value:
       largura.value = parseInt(largura.value) + 2;
 	  if (largura.value > 100)
-		  largura.value = 100;//valor máximo
+		largura.value = 100;
       conteudo.style.width = largura.value + '%';
       conteudo.style.marginLeft = '-' + Math.ceil(largura.value/2) + '%';//centralizar
       teclou = true;
@@ -278,7 +280,7 @@ function selecConteudo(){
 
 /*
 ===============================================================================
-PROGRAMA PRINCIPAL
+  PROGRAMA PRINCIPAL
 ===============================================================================
 */ 
 
@@ -334,4 +336,8 @@ c.addEventListener("click",selecConteudo);
 executar.addEventListener("click",execTeleprompter);
 btExecutar.focus();
 
-//FIM DO PROGRAMA
+/*
+===============================================================================
+  FIM DO PROGRAMA
+===============================================================================
+*/ 
